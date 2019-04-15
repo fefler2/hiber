@@ -25,8 +25,8 @@ public class ConnectDB {
         connection = DriverManager.getConnection(url, username, password);
 
         String sql;
-        PreparedStatement ps = connection.prepareStatement("select * from student" +
-                "");
+        PreparedStatement ps = connection.prepareStatement("select * from student212dfs");
+        System.out.println(ps.toString());
 //        PreparedStatement ps = connection.prepareStatement("INSERT INTO 'studentdatabase', 'student' ('name') VALUES ('michael clark');");
         int status = ps.getResultSetType();
 //        int status = ps.executeUpdate();
