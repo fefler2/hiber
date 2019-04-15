@@ -10,7 +10,7 @@ public class ConnectDB {
     static String dataBaseName = ""; // nazwa bazy danych
     //
     //    czy bez "/" na koncu static String url = "jdbc:mysql://localhost"
-    static String url = "jdbc:mysql://localhost/studentdatabase"; // nazwa
+    static String url = "jdbc:mysql://localhost/studentdatabase"; // nazwa bazy danych, a nie tabeli!
 
 //     static String url = "jdbc:mysql://localhost:3306/fussa?useLegacyDatetimeCode=false&serverTimezone=UTC\n" +dataBaseName;
     static String username = "root";
@@ -33,6 +33,7 @@ public class ConnectDB {
 //        INSERT INTO 'studendatabase', 'student' ('name') VALUES ('michael clark');
 //        int status = ps.executeUpdate();
         System.out.println(sel.executeQuery().getMetaData().getColumnCount());
+        System.out.println(sel);
 
 //        if (status != 0) {
 //            System.out.println("Database was Connection");
