@@ -25,11 +25,11 @@ public class ConnectDB {
         connection = DriverManager.getConnection(url, username, password);
 
         String sql;
-        PreparedStatement ps = connection.prepareStatement("select * from student212dfs");
-        System.out.println(ps.toString());
-//        PreparedStatement ps = connection.prepareStatement("INSERT INTO 'studentdatabase', 'student' ('name') VALUES ('michael clark');");
-        int status = ps.getResultSetType();
-//        int status = ps.executeUpdate();
+//        PreparedStatement ps = connection.prepareStatement("select * from student");
+//        System.out.println(ps.toString());
+        PreparedStatement ps = connection.prepareStatement("INSERT INTO 'student' VALUES ('michael clark');");
+//        INSERT INTO 'studendatabase', 'student' ('name') VALUES ('michael clark');
+        int status = ps.executeUpdate();
 //        if (status != 0) {
 //            System.out.println("Database was Connection");
 //            System.out.println("Record was inserted");
