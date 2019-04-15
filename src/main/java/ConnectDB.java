@@ -10,8 +10,9 @@ public class ConnectDB {
     static String dataBaseName = "";
     //
     //    czy bez "/" na koncu static String url = "jdbc:mysql://localhost"
-//    static String url = "jdbc:mysql://localhost/" +dataBaseName;
-    static String url = "jdbc:mysql://localhost:3306/fussa?useLegacyDatetimeCode=false&serverTimezone=UTC\n" +dataBaseName;
+    static String url = "jdbc:mysql://localhost/" +dataBaseName;
+
+//     static String url = "jdbc:mysql://localhost:3306/fussa?useLegacyDatetimeCode=false&serverTimezone=UTC\n" +dataBaseName;
     static String username = "root";
     static String password  = ""; // bez hasla?, chyba jest dobrze
 //    static String password  = ""; // bez hasla?
@@ -24,12 +25,14 @@ public class ConnectDB {
         connection = DriverManager.getConnection(url, username, password);
 
         String sql;
-        PreparedStatement ps = connection.prepareStatement("INSERT INTO 'studendatabase', 'student' ('name') VALUES ('michael clark');");
+//        PreparedStatement ps = connection.prepareStatement("select * from");
+        PreparedStatement ps = connection.prepareStatement("INSERT INTO 'studentDatabase', 'student' ('name') VALUES ('michael clark');");
+//        int status = ps.getResultSetType();
         int status = ps.executeUpdate();
-        if (status != 0) {
-            System.out.println("Database was Connection");
-            System.out.println("Record was inserted");
-        }
+//        if (status != 0) {
+//            System.out.println("Database was Connection");
+//            System.out.println("Record was inserted");
+//        }
 
     }
 }
