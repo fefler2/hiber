@@ -7,10 +7,10 @@ public class ConnectDB {
     // DB Connection variables
 
     static Connection connection = null;
-    static String dataBaseName = "";
+    static String dataBaseName = ""; // nazwa bazy danych
     //
     //    czy bez "/" na koncu static String url = "jdbc:mysql://localhost"
-    static String url = "jdbc:mysql://localhost/" +dataBaseName;
+    static String url = "jdbc:mysql://localhost" ;
 
 //     static String url = "jdbc:mysql://localhost:3306/fussa?useLegacyDatetimeCode=false&serverTimezone=UTC\n" +dataBaseName;
     static String username = "root";
@@ -27,7 +27,7 @@ public class ConnectDB {
         String sql;
 //        PreparedStatement ps = connection.prepareStatement("select * from student");
 //        System.out.println(ps.toString());
-        PreparedStatement ps = connection.prepareStatement("INSERT INTO 'student' VALUES ('michael clark');");
+        PreparedStatement ps = connection.prepareStatement("insert into student (studentID) values (6);");
 //        INSERT INTO 'studendatabase', 'student' ('name') VALUES ('michael clark');
         int status = ps.executeUpdate();
 //        if (status != 0) {
