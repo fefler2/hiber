@@ -16,6 +16,8 @@ public class BookManager {
         final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
                 .configure() // configures settings from hibernate.cfg.xml
                 .build();
+//        SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+
 
         try {
             sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
@@ -60,6 +62,10 @@ public class BookManager {
         // code to remove a book
     }
 
+    public void metoda(){
+        SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+
+    }
 
     public static void main(String[] args) {
         // code to run the program
@@ -71,6 +77,7 @@ public class BookManager {
 
         BookManager manager = new BookManager();
 
+//        manager.metoda();
         manager.setup();
 
 //        manager.exit();

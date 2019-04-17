@@ -50,6 +50,19 @@ public class Customer implements Serializable{
         this.lName = lName;
     }
 
+    String reverse(String s){
+        return s.length() + "";
+    }
+
+
+    public static void main(String[] args) {
+        Customer consumer = new Customer();
+        System.out.println(consumer.reverse("ala " + "ma kota"));
+        System.out.println();
+
+        String s = "ala ma kota";
+        System.out.println(s.substring(1));
+    }
 
 
 
